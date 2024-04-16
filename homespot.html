@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> team 17</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://unpkg.com/feather-icons"></script>
+  
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      
+      <a class="navbar-brand me-auto" href="#"><img src="img/logo.svg.png" alt=""></a>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">HomeSpot</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Kota Pilihan
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Jakarta</a></li>
+                <li><a class="dropdown-item" href="#">Bandung</a></li>
+                <li><a class="dropdown-item" href="#">Surabaya</a></li>
+                <li><a class="dropdown-item" href="#">Makassar</a></li>
+                <li><a class="dropdown-item" href="#">Medan</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2 active" aria-current="page" href="#">beli</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="#">Tentang Kami</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="#">Asuransi</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <a href="register.html" class="daftar-button">Daftar</a>
+      <a href="login.html" class="login-button">Login</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" 
+      aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="hero-section d-flex align-item-center justify-content-center fs-1
+  text-white flex-column mt ">
+      <h1>Beli Rumah Impianmu di HomeSpot</h1>
+
+      <div class="flex flex-row mobile:flex-col gap-2 p-[17px] bg-[#292929] bg-opacity-70 rounded-xl d-flex justify-content-center">
+        <div class="form-search d-flex" style="width: 700px;">
+          <input class="form-control form-control-lg" type="text" placeholder="Cari lokasi, nama properti atau nama developer" aria-label=".form-control-lg example">
+          <button type="button" class="btn btn-primary"><i data-feather="list"></i></button>
+        </div>
+        <button style="width: 300px;" type="button" class="btn bg-primary text-white">Mulai Mencari</button>
+      </div>
+  </section>
+
+  <br>
+
+  <div class="flex flex-row mobile:flex-col w-full h-96 -mt-4 mobile:mb-[15rem] mb-[1rem] ">
+    
+    <div class="w-1/3 mobile:w-full h-full bg-[#EAF6FFCC] bg-opacity-80 rounded-br-[16px] pr-4 mobile:pr-0 backgroundNearby">
+      <div class="card-body">
+        <h3 class="card-title m-3">Properti Baru di Sekitarmu</h3>
+        <div class="d-flex justify-content-between m-3">
+          <p class="card-text">Rekomendasi pilihan kami untukmu. Dari rumah minimalis, ruko strategis, sampai apartemen modern semua tersedia.</p>        <br>
+          <a href="#" class="btn btn-primary">Lihat Selekapnya</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-2/3 mobile:hidden -ml-6 mobile:ml-1 max-h-96">
+      <div id="carouselExampleControls" class="slide-kota" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="card text-bg-white">
+                  <img src="img/rumah.jpg" class="card-img" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Umah Melah Banyuning</h5>
+                    <p class="card-text">Bali2 KT • 1 KM • LB 45m2 • LT 100m2 • SHM  </p>
+                    <br>
+                    <p class="text-primary">Rp290 Jt - Rp619 Jt</p>
+                    <a href="#" class="btn btn-primary">Lihat Selekapnya</a>
+                  </div>
+                </div>
+              </div>
+              <!-- Add more cards here -->
+              <div class="col-sm-4">
+                <div class="card text-bg-white">
+                  <img src="img/rumah.jpg" class="card-img" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Umah Melah Banyuning</h5>
+                    <p class="card-text">Bali2 KT • 1 KM • LB 45m2 • LT 100m2 • SHM  </p>
+                    <br>
+                    <p class="text-primary">Rp290 Jt - Rp619 Jt</p>
+                    <a href="#" class="btn btn-primary">Lihat Selekapnya</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="card text-bg-white">
+                  <img src="img/rumah.jpg" class="card-img" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Umah Melah Banyuning</h5>
+                    <p class="card-text">Bali2 KT • 1 KM • LB 45m2 • LT 100m2 • SHM  </p>
+                    <br>
+                    <p class="text-primary">Rp290 Jt - Rp619 Jt</p>
+                    <a href="#" class="btn btn-primary">Lihat Selekapnya</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Add more carousel items here -->
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="card text-bg-white">
+                  <img src="img/rumah.jpg" class="card-img" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Umah Melah Banyuning</h5>
+                    <p class="card-text">Bali2 KT • 1 KM • LB 45m2 • LT 100m2 • SHM  </p>
+                    <br>
+                    <p class="text-primary">Rp290 Jt - Rp619 Jt</p>
+                    <a href="#" class="btn btn-primary">Lihat Selekapnya</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="card text-bg-white">
+                  <img src="img/rumah.jpg" class="card-img" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Umah Melah Banyuning</h5>
+                    <p class="card-text">Bali2 KT • 1 KM • LB 45m2 • LT 100m2 • SHM  </p>
+                    <br>
+                    <p class="text-primary">Rp290 Jt - Rp619 Jt</p>
+                    <a href="#" class="btn btn-primary">Lihat Selekapnya</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="flex flex-row mobile:flex-col w-full h-96 -mt-4 mobile:mb-[15rem] mb-[1rem] ">
+    <div class="landing-page header-w-nav flex mobile:flex-col">
+      <div class="flex">
+        <h3 class="landing-page header-w-nav__title-virtual fontsize__medium text-black mobile:pl-4 m-3">Jelajahi Properti Dengan Virtual 360</h3>
+      </div>
+    </div>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="card text-bg-dark">
+                <img src="img/rumah.jpg" class="card-img" alt="...">
+                <div class="card-img-overlay text-center">
+                  <h5 class="card-title">Umah Melah Banyuning</h5>
+                  <p class="card-text ">Jelajahi dengan 360 Virtual</p>
+                  <br>
+                  <br>
+                  <a href="" class="virtual-button d-flex justify-content-center border border-danger rounded-pill bg-primary text-white text-decoration-none">virtual 360</a>
+                </div>
+              </div>
+            </div>
+            <!-- Add more cards here -->
+            <div class="col-sm-4">
+              <div class="card text-bg-dark">
+                <img src="img/rumah.jpg" class="card-img" alt="...">
+                <div class="card-img-overlay">
+                  <h5 class="card-title d-flex justify-content-center">Umah Melah Banyuning</h5>
+                  <p class="card-text d-flex justify-content-center">Jelajahi dengan 360 Virtual</p><br>
+                  <br>
+                  <a href="" class="virtual-button d-flex justify-content-center border border-danger rounded-pill bg-primary text-white text-decoration-none">virtual 360</a>               
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card text-bg-dark">
+                <img src="img/rumah.jpg" class="card-img" alt="...">
+                <div class="card-img-overlay">
+                  <h5 class="card-title d-flex justify-content-center">Umah Melah Banyuning</h5>
+                  <p class="card-text d-flex justify-content-center">Jelajahi dengan 360 Virtual</p>
+                  <br>
+                  <br>
+                  <a href="" class="virtual-button d-flex justify-content-center border border-danger rounded-pill bg-primary text-white text-decoration-none">virtual 360</a>                                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Add more carousel items here -->
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="card text-bg-dark">
+                <img src="img/rumah.jpg" class="card-img" alt="...">
+                <div class="card-img-overlay">
+                  <h5 class="card-title d-flex justify-content-center">Umah Melah Banyuning</h5>
+                  <p class="card-text d-flex justify-content-center">Jelajahi dengan 360 Virtual</p>
+                  <br>
+                  <br>
+                  <a href="" class="virtual-button d-flex justify-content-center border border-danger rounded-pill bg-primary text-white text-decoration-none">virtual 360</a> 
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card text-bg-dark">
+                <img src="img/rumah.jpg" class="card-img" alt="...">
+                <div class="card-img-overlay">
+                  <h5 class="card-title d-flex justify-content-center">Umah Melah Banyuning</h5>
+                  <p class="card-text d-flex justify-content-center">Jelajahi dengan 360 Virtual</p>
+                  <br>
+                  <br>
+                  <a href="" class="virtual-button d-flex justify-content-center border border-danger rounded-pill bg-primary text-white text-decoration-none">virtual 360</a>             
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <br>
+
+  <div class=" flex flex-row mobile:flex-col mobile:w-full mobile:mb-[20rem] mb-[1rem] w-full h-96 -mt-4 tab:mb-[3rem]">
+    
+    <div class="w-1/3 h-full mobile:w-full">
+      <div class="card-body">
+        <h3 class="card-title">Cari properti bedasarkan Kota</h3>
+        <div class="d-flex justify-content-between">
+          <p class="card-text">Yuk, cari properti yang sesuai dengan preferensimu di kota-kota pilihan terfavorit!</p>
+          <a href="#" class="btn btn-primary">Lihat Selekapnya</a>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <div class="w-2/3 -ml-2 mt-[5rem] mobile:ml-[3rem] xxl:h-80 xl:h-60 bg-[#EAF6FFCC] bg-opacity-80 rounded-2xl pl-8 d-flex justify-content-around bg-info-subtle">
+      <div class="card border border-white" style="width: 12rem;">
+        <img src="img/Bandung card.png" class="card-img-top" alt="...">
+      </div>
+      <div class="card border border-white" style="width: 12rem;">
+        <img src="img/Jakarta card.png" class="card-img-top" alt="...">
+      </div>
+      <div class="card border border-white" style="width: 12rem;">
+        <img src="img/Makassar card.png" class="card-img-top" alt="...">
+      </div>
+      <div class="card border border-white" style="width: 12rem;">
+        <img src="img/Medan card.png" class="card-img-top" alt="...">
+      </div>
+      <div class="card border border-white" style="width: 12rem;">
+        <img src="img/Surabaya card.png" class="card-img-top" alt="...">
+      </div>
+    </div>
+
+  </div>
+  <br>
+
+  <div>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="card text-bg-dark">
+                <img src="img/image 2.png" class="card-img" alt="...">
+                <div class="card-img-overlay">
+                </div>
+              </div>
+            </div>
+            <!-- Add more cards here -->
+            <div class="col-sm-4">
+              <div class="card text-bg-dark">
+                <img src="img/image 2.png" class="card-img" alt="...">
+                <div class="card-img-overlay">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card text-bg-dark">
+                <img src="img/image 2.png" class="card-img" alt="...">
+                <div class="card-img-overlay">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+
+  <div class="program-kpr bg-primary">
+    <div class="styles_section__title--desktop__XNc_L styles_section__title_white__UJ7_J d-flex justify-content-center color text-white">
+      <h2>Program KPR</h2>
+    </div>
+    <div class="styles_section__description--desktop__4XehS styles_section__title_white__UJ7_J d-flex justify-content-center text-white">
+      <p>Simulasikan terlebih dahulu program KPR yang Anda inginkan berdasarkan kemampuan finansial Anda</p>
+    </div>
+    
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title d-flex text-align-center justify-content-center">program 1</h5>
+                <div class="flex mb-2.5">
+                  <h6 class="landing-page font-bold fontsize__medium">SUKU BUNGA </h6>
+                </div>
+                <div class="flex mb-7 text-[#666666]">8.79% pertahun</div>
+                <br>
+                <div class="flex mb-2.5">
+                  <h6 class="landing-page font-bold fontsize__medium">MASA KREDIT</h6>
+                </div>
+                <div class="flex mb-7 text-[#666666]">8 Tahun</div>
+                <br>
+                <div class="flex mb-2.5">
+                  <h6 class="landing-page font-bold fontsize__medium">TENOR </h6>
+                </div>
+                <div class="flex mb-7 text-[#666666]">9 - 20 Tahun</div>
+                <br>
+                <div class="flex mb-2.5">
+                  <h6 class="landing-page font-bold fontsize__medium">KETERANGAN</h6>
+                </div>
+                <div class="flex mb-7 text-[#666666]"> Berlaku sampai 31 maret 2024</div>
+                <br>
+                <a href="#" class="btn btn-primary d-flex justify-content-center">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <!-- Add more cards here -->
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body ">
+                <h5 class="card-title d-flex text-align-center justify-content-center">program 2</h5>
+                <div class="flex mb-2.5">
+                  <h6 class="landing-page font-bold fontsize__medium">SUKU BUNGA </h6>
+                </div>
+                <div class="flex mb-7 text-[#666666]">8.79% pertahun</div>
+                <br>
+                <div class="flex mb-2.5">
+                  <h6 class="landing-page font-bold fontsize__medium">MASA KREDIT</h6>
+                </div>
+                <div class="flex mb-7 text-[#666666]">8 Tahun</div>
+                <br>
+                <div class="flex mb-2.5">
+                  <h6 class="landing-page font-bold fontsize__medium">TENOR </h6>
+                </div>
+                <div class="flex mb-7 text-[#666666]">9 - 20 Tahun</div>
+                <br>
+                <div class="flex mb-2.5">
+                  <h6 class="landing-page font-bold fontsize__medium">KETERANGAN</h6>
+                </div>
+                <div class="flex mb-7 text-[#666666]"> Berlaku sampai 31 maret 2024</div>
+                <br>
+                <a href="#" class="btn btn-primary d-flex justify-content-center">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title d-flex text-align-center justify-content-center">program 3</h5>
+                <div class="flex mb-2.5">
+                  <h6 class="landing-page font-bold fontsize__medium">SUKU BUNGA </h6>
+                </div>
+                <div class="flex mb-7 text-[#666666]">8.79% pertahun</div>
+                <br>
+                <div class="flex mb-2.5">
+                  <h6 class="landing-page font-bold fontsize__medium">MASA KREDIT</h6>
+                </div>
+                <div class="flex mb-7 text-[#666666]">8 Tahun</div>
+                <br>
+                <div class="flex mb-2.5">
+                  <h6 class="landing-page font-bold fontsize__medium">TENOR </h6>
+                </div>
+                <div class="flex mb-7 text-[#666666]">9 - 20 Tahun</div>
+                <br>
+                <div class="flex mb-2.5">
+                  <h6 class="landing-page font-bold fontsize__medium">KETERANGAN</h6>
+                </div>
+                <div class="flex mb-7 text-[#666666]"> Berlaku sampai 31 maret 2024</div>
+                <br>
+                <a href="#" class="btn btn-primary d-flex justify-content-center">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Add more carousel items here -->
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title d-flex text-align-center justify-content-center">program 4</h5>
+                <div class="flex mb-2.5">
+                  <h6 class="landing-page font-bold fontsize__medium">SUKU BUNGA </h6>
+                </div>
+                <div class="flex mb-7 text-[#666666]">8.79% pertahun</div>
+                <br>
+                <div class="flex mb-2.5">
+                  <h6 class="landing-page font-bold fontsize__medium">MASA KREDIT</h6>
+                </div>
+                <div class="flex mb-7 text-[#666666]">8 Tahun</div>
+                <br>
+                <div class="flex mb-2.5">
+                  <h6 class="landing-page font-bold fontsize__medium">TENOR </h6>
+                </div>
+                <div class="flex mb-7 text-[#666666]">9 - 20 Tahun</div>
+                <br>
+                <div class="flex mb-2.5">
+                  <h6 class="landing-page font-bold fontsize__medium">KETERANGAN</h6>
+                </div>
+                <div class="flex mb-7 text-[#666666]"> Berlaku sampai 31 maret 2024</div>
+                <br>
+                <a href="#" class="btn btn-primary d-flex justify-content-center">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title d-flex text-align-center justify-content-center">program 5</h5>
+                <div class="flex mb-2.5">
+                  <h6 class="landing-page font-bold fontsize__medium">SUKU BUNGA </h6>
+                </div>
+                <div class="flex mb-7 text-[#666666]">8.79% pertahun</div>
+                <br>
+                <div class="flex mb-2.5">
+                  <h6 class="landing-page font-bold fontsize__medium">MASA KREDIT</h6>
+                </div>
+                <div class="flex mb-7 text-[#666666]">8 Tahun</div>
+                <br>
+                <div class="flex mb-2.5">
+                  <h6 class="landing-page font-bold fontsize__medium">TENOR </h6>
+                </div>
+                <div class="flex mb-7 text-[#666666]">9 - 20 Tahun</div>
+                <br>
+                <div class="flex mb-2.5">
+                  <h6 class="landing-page font-bold fontsize__medium">KETERANGAN</h6>
+                </div>
+                <div class="flex mb-7 text-[#666666]"> Berlaku sampai 31 maret 2024</div>
+                <br>
+                <a href="#" class="btn btn-primary d-flex justify-content-center">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title d-flex text-align-center justify-content-center">program 6</h5>
+                <div class="flex mb-2.5">
+                  <h6 class="landing-page font-bold fontsize__medium">SUKU BUNGA </h6>
+                </div>
+                <div class="flex mb-7 text-[#666666]">8.79% pertahun</div>
+                <br>
+                <div class="flex mb-2.5">
+                  <h6 class="landing-page font-bold fontsize__medium">MASA KREDIT</h6>
+                </div>
+                <div class="flex mb-7 text-[#666666]">8 Tahun</div>
+                <br>
+                <div class="flex mb-2.5">
+                  <h6 class="landing-page font-bold fontsize__medium">TENOR </h6>
+                </div>
+                <div class="flex mb-7 text-[#666666]">9 - 20 Tahun</div>
+                <br>
+                <div class="flex mb-2.5">
+                  <h6 class="landing-page font-bold fontsize__medium">KETERANGAN</h6>
+                </div>
+                <div class="flex mb-7 text-[#666666]"> Berlaku sampai 31 maret 2024</div>
+                <br>
+                <a href="#" class="btn btn-primary d-flex justify-content-center">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script> feather.replace(); </script>
+</body>
+</html>
